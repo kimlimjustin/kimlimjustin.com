@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body{
+    font-family: "Lato", "Roboto";
+}
+h1{
+    font-size: 28px;
+}
+.header{
+    text-align: center;
+}
+.profile-name{
+    margin: 5px;
+    font-size: 36px;
+}
+.profile-picture{
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.content{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
