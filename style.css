@@ -23,3 +23,18 @@ h1{
     margin-left: auto;
     margin-right: auto;
 }
+
+.error-content{
+    text-align: center;
+}
+
+.error-status{
+    margin-top: 1.5rem;
+    font-size: 4.5rem;
+    font-family: "Roboto";
+}
+
+.error-description{
+    font-size: 1.5rem;
+    font-family: "Lato";
+}
