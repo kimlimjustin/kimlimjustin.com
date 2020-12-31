@@ -1,0 +1,1 @@
+document.querySelector("[name='prevUrl']").value = window.location.href

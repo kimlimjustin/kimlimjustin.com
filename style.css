@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Chilanka");
 body{
-    font-family: "Lato", "Roboto";
+    font-family: "Chilanka", "Lato", "Roboto";
 }
 h1{
     font-size: 28px;
@@ -37,4 +38,24 @@ h1{
 .error-description{
     font-size: 1.5rem;
     font-family: "Lato";
+}
+
+.newsletter{
+    text-align: center;
+}
+
+.newsletter-input{
+    min-width: 30%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #101c29;
+}
+
+.newsletter-submit{
+    min-width: 10%;
+    background-color: #101c29;
+    color:#eef0f2;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
 }
