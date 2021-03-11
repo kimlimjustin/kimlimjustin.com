@@ -16,5 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".topnav-exit-menu").addEventListener("click", () => {
             document.querySelector(".topnav-menu").style.width = '0vw';
         })
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.querySelector(".topnav-menu").style.width = '0vw';
+            })
+        })
     })
 })
