@@ -19,6 +19,8 @@
 	<meta property="twitter:description" content="I'm Justin from Indonesia. I am a junior high school student who loves programming.">
 	<meta property="twitter:image" content="https://kimlim.net/Assets/pp.jpg">
 	<script src="script.js" defer></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body data-theme="dark">
 	<div class="loading-animation">
@@ -42,7 +44,7 @@
 		<div class="topnav-menu">
 			<span class="topnav-exit-menu">&times;</span>
 			<a href="#about">About</a>
-			<a href="">Projects</a>
+			<a href="#projects">Projects</a>
 			<a href="">Contact</a>
 		</div>
 	</div>
@@ -53,13 +55,88 @@
 			<p class="intro-text">I'm a junior high school student who loves programming .</p>
 			<a href="mailto:kimlimjustin@gmail.com" class="intro-btn">Get In Touch</a>
 		</div>
-		<div class="about-me" id="about">
+		<div class="about-me" id="about" data-aos="fade-up" data-aos-duration="1500">
 			<div class="about-me-content">
 				<h1 class="about-me-title">About Me</h1>
 				<p class="about-me-text">Hello, I'm Justin Maximillian Kimlim from Indonesia, a junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone.</p>
 			</div>
 			<div class="about-me-pp">
-				<img src="./Assets/pp.jpg" alt="">
+				<img src="./Assets/pp.jpg" alt="Justin Maximillian Kimlim's potrait photo">
+			</div>
+		</div>
+		<div class="projects" data-aos="fade-up" data-aos-duration="1500" id="projects">
+			<h1 class="project-title">Recent Noteworthy Projects</h1>
+			<div class="project-box" data-aos="fade-up">
+				<a href="https://fire-ui.netlify.app/" class="project-preview">
+					<img src="./Assets/FireUI-logo.jpg" alt="Fire UI logo">
+				</a>
+				<div class="project-content" data-aos="zoom-in">
+					<h4 class="project-content-title">Fire UI</h4>
+					<p class="project-content-description">A user-friendly and reliable CSS library</p>
+					<a href="https://github.com/fire-ui/fire-ui" class="project-link" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+					</a>
+					<a href="https://fire-ui.netlify.app/" class="project-link" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+					</a>
+				</div>
+			</div>
+			<div class="project-box" data-aos="fade-up">
+				<a href="https://google-forms-clone.herokuapp.com" class="project-preview">
+					<img src="./Assets/google-forms-clone.png" alt="Google Forms Clone">
+				</a>
+				<div class="project-content">
+					<h4 class="project-content-title">Google Forms Clone</h4>
+					<p class="project-content-description">Clone of Google forms built using Django and Javascript</p>
+					<a href="https://github.com/kimlimjustin/google-form-clone" class="project-link" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+					</a>
+					<a href="https://google-forms-clone.herokuapp.com/" class="project-link" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+					</a>
+				</div>
+			</div>
+			<div class="project-box" data-aos="flip-right">
+				<a href="https://github.com/kimlimjustin/whatsapp-clone" class="project-preview">
+					<img src="./Assets/whatsapp-clone.png" alt="Whatsapp Clone">
+				</a>
+				<div class="project-content">
+					<h4 class="project-content-title">Whatsapp Clone</h4>
+					<p class="project-content-description">Web based Whatsapp clone with real time private chat and group chat features built using MERN stack.</p>
+					<a href="https://github.com/kimlimjustin/whatsapp-clone" class="project-link" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+					</a>
+				</div>
+			</div>
+			<div class="project-box" data-aos="flip-down">
+				<a href="https://google-keeps-clone.herokuapp.com" class="project-preview">
+					<img src="./Assets/google-keeps-clone.png" alt="Google Keep Clone">
+				</a>
+				<div class="project-content">
+					<h4 class="project-content-title">Google Keep Clone</h4>
+					<p class="project-content-description">Clone of Google keeps built using Django and Javascript</p>
+					<a href="https://github.com/kimlimjustin/google-keep-clone" class="project-link">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+					</a>
+					<a href="https://google-keeps-clone.herokuapp.com/" class="project-link">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+					</a>
+				</div>
+			</div>
+			<div class="project-box" data-aos="zoom-out-up">
+				<a href="https://abstractmark.netlify.app/" class="project-preview">
+					<img src="./Assets/abstractmark-ss.png" alt="AbstractMark">
+				</a>
+				<div class="project-content">
+					<h4 class="project-content-title">AbstractMark</h4>
+					<p class="project-content-description">Next level generation of markdown, allowing users to add styling, classes, and more into their markdown.</p>
+					<a href="https://github.com/abstractmark/abstractmark" class="project-link">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+					</a>
+					<a href="https://abstractmark.netlify.app" class="project-link">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
