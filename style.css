@@ -275,11 +275,16 @@ body[data-theme="light"]{
     width: 70%;
     display: block;
     z-index: 1;
+    transition: .5s;
 }
 
 .project-preview img{
     width: -webkit-fill-available;
     display: block;
+}
+
+.project-preview:hover{
+    opacity: .6;
 }
 
 .project-content{
@@ -381,6 +386,20 @@ body[data-theme="light"]{
     color: var(--green);
 }
 
+.copyright{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.github-stats{
+    color: var(--green);
+    text-decoration: none;
+}
+
+.github-stars, .github-forks{
+    width: 1rem;
+}
 
 @media only screen and (min-width: 1400px){
     .intro, .projects{
@@ -394,7 +413,68 @@ body[data-theme="light"]{
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 768px){
+    .social-link, .email-link{
+        bottom: 50%;
+        width: 40px;
+        position: fixed;
+        z-index: 8;
+        color: var(--green);
+        transform: translate(0, 50%);
+    }
+
+    .social-link{
+        left: 1rem;
+    }
+    .email-link{
+        right: 1rem;
+    }
+    .email-link-flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email-link a{
+        writing-mode: vertical-rl;
+    }
+    .email-link a:hover{
+        color: #50b69e;
+    }
+    
+    .social-link-item, .email-link a{
+        margin: 1rem 0;
+        display: block;
+        text-decoration: none;
+        color: var(--green);
+        transition: .5s;
+    }
+    .social-link-item:hover, .email-link a:hover{
+        color: #50b69e;
+    }
+    
+    .social-link::before, .email-link .email-link-flex::before{
+        content: "";
+        background-color: var(--light-stale);
+        width: 1px;
+        height: 100vh;
+        display: block;
+        margin: 0 auto;
+        opacity: .7;
+    }
+    
+    .social-link::after, .email-link .email-link-flex::after{
+        content: "";
+        background-color: var(--light-stale);
+        width: 1px;
+        height: 100vh;
+        display: block;
+        margin: 0 auto;
+        opacity: .7;
+    }
+}
+
+@media only screen and (max-width: 767px){
     .container{
         padding: 0 50px !important;
     }
@@ -460,6 +540,20 @@ body[data-theme="light"]{
     .project-box:nth-child(2n) .project-content{
         left: 2rem;
     }
+    .social-link{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin: auto;
+        max-width: 300px;
+    }
+    .social-link-item{
+        color: var(--green);
+        margin: 1rem auto;
+        width: 2rem;
+    }
+    .email-link{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 520px){
@@ -467,7 +561,7 @@ body[data-theme="light"]{
         padding: 0 25px !important;
     }
     .about-me{
-        min-height: calc(110vh - 16rem);
+        min-height: calc(140vh - 16rem);
     }
     .about-me-content{
         width: 100%;
@@ -496,5 +590,11 @@ body[data-theme="light"]{
     .contacts-link-btn{
         max-width: 70%;
         margin: 1rem auto;
+    }
+}
+
+@media only screen and (max-width: 368px){
+    .about-me{
+        min-height: calc(120vh - 16rem);
     }
 }
