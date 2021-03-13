@@ -99,12 +99,17 @@ body[data-theme="light"]{
 }
 
 .intro, .projects{
-    min-height: calc(90vh - 16rem);
-    padding: 8rem 0;
+    min-height: calc(90vh - 12rem);
+    padding: 8rem 0 4rem 0;
 }
 
 .about-me{
-    min-height: calc(70vh - 16rem);
+    min-height: calc(60vh - 8rem);
+    padding: 4rem 0;
+}
+
+.contacts{
+    min-height: calc(40vh - 16rem);
     padding: 8rem 0;
 }
 
@@ -322,6 +327,67 @@ body[data-theme="light"]{
     margin-left: auto;
 }
 
+.contact{
+    position: relative;
+}
+
+.contacts::before{
+    position: absolute;
+    content: "Get In Touch";
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    z-index: -3;
+    width: 100%;
+    transform: translate(-50%, -25px);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(-70deg,#804eda,#71c2a3);
+}
+
+.contacts-content{
+    background-color: var(--navy);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    opacity: .8;
+    margin-top: calc(clamp(20px, 4vw, 40px) - .5rem);
+    color: var(--green);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.contacts-content-text{
+    font-size: 1.25rem;
+    margin: 0 1rem;
+    display: inline-block;
+}
+.contacts-link-btn{
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--slate);
+    color: var(--slate);
+    border-radius: 15px;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.25rem;
+    transition: .5s;
+}
+
+.contacts-link-btn:hover{
+    border: 1px solid #50b69e;
+    background-color: rgba(59,174,129,0.5);
+    color: var(--green);
+}
+
+
+@media only screen and (min-width: 1400px){
+    .intro, .projects{
+        min-height: calc(90vh - 24rem);
+        padding: 12rem 0;
+    }
+}
 @media only screen and (max-width: 1080px){
     .container{
         padding: 0 100px !important;
@@ -419,5 +485,16 @@ body[data-theme="light"]{
     }
     .about-me-pp:hover::before{
         transform: translate(1px, 1px);
+    }
+    .contacts-content{
+        grid-template-columns: auto;
+        margin-top: 0;
+    }
+    .contacts-content-text{
+        font-size: 1rem;
+    }
+    .contacts-link-btn{
+        max-width: 70%;
+        margin: 1rem auto;
     }
 }
