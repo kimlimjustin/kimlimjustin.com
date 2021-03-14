@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Deteck theme preference
+    if(localStorage.getItem('theme')) document.body.dataset.theme = localStorage.getItem('theme')
+    else{
+        let themePreference = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark": "light";
+        localStorage.setItem('theme', themePreference);
+        document.body.dataset.theme = themePreference;
+    }
     if(document.documentElement.clientWidth <= 480){
         document.querySelector(".topnav-name").innerText = "<Justin M.K. />"
     }else{
@@ -30,4 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#github-forks").innerText = result["forks"]
     })
     .catch(() => document.querySelector(".github-stats").removeChild(document.querySelector(".github-stats")))
+
+    document.querySelector(".switch-theme-btn").addEventListener("click", () => {
+        let newTheme = document.body.dataset.theme === "dark" ? "light": "dark";
+        document.body.dataset.theme = newTheme
+        localStorage.setItem('theme', newTheme)
+    })
 })
