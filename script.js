@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         recentArticles.forEach(article => {
             let articleElement = document.createElement('div');
             articleElement.classList.add("article");
-            articleElement.innerHTML = `<img src="${article.social_image}" class="article-cover">
+            articleElement.innerHTML = `<img src="${article.social_image}" class="article-cover" alt="cover image for${article.title} on dev.to">
             <h2 class="article-title">${article.title}</h2>
             <div class="article-stats">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="ahgconqwly4xv7fvtjtcgkecns15nssw">
@@ -72,6 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let readMoreElement = document.createElement('a')
         readMoreElement.classList.add('article-read-more');
         readMoreElement.innerText = `Read more on dev.to`
+        readMoreElement.href = 'https://dev.to/kimlimjustin';
+        readMoreElement.setAttribute('target', "_blank");
+        readMoreElement.setAttribute('rel', 'noopener');
         document.querySelector("#articles").appendChild(readMoreElement)
     })
     .catch(() => document.querySelector("#articles").parentNode.removeChild(document.querySelector("#articles")))
