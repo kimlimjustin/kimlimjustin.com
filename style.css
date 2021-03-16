@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Chilanka");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
 
 :root{
     --dark-navy: #020c1b;
@@ -14,7 +15,7 @@
 }
 
 body{
-    font-family: "Roboto", "Lato", "Chilanka";
+    font-family: "Roboto", "Lato", "Anonymous Pro", "Chilanka";
     margin: 0;
     padding: 0;
     transition: .5s;
@@ -443,24 +444,27 @@ body[data-theme="light"] .contacts-link-btn{
     width: 1rem;
 }
 
-.switch-theme{
+.site-setting{
     position: fixed;
-    bottom: 4rem;
+    bottom: 30%;
     right: 4rem;
     display: block;
-    background-color: var(--contrast-color);
-    padding: .5rem;
-    border-radius: 50%;
     cursor: pointer;
     z-index: 7;
+    height: 2.5rem;
 }
 
-.switch-theme-btn{
+.switch-theme-btn, .terminal-version-btn{
     color: var(--navy);
     width: 2.5rem;
+    background-color: var(--contrast-color);
+    padding: .5rem;
+    margin: 1rem 0;
+    display: block;
+    border-radius: 50%;
 }
 
-body[data-theme="light"] .switch-theme-btn{
+body[data-theme="light"] .switch-theme-btn .terminal-version-btn{
     color: var(--white);
 }
 
@@ -484,7 +488,7 @@ body[data-theme="light"] .switch-theme-btn{
 .article-cover{
     width: 100%;
     border-radius: .8rem;
-    opacity: .8;
+    opacity: .5;
 }
 
 .article{
@@ -497,7 +501,12 @@ body[data-theme="light"] .switch-theme-btn{
     width: calc(50% - 6.4rem);
     display: inline-block;
     position: relative;
-    cursor: pointer;
+    cursor: grab;
+}
+
+.article-code-svg{
+    width: 3rem;
+    height: 1rem;
 }
 
 .article-title{
@@ -505,9 +514,10 @@ body[data-theme="light"] .switch-theme-btn{
     margin: .75rem;
     margin-right: 2rem;
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     font-size: 2.25vw;
     opacity: 1;
+    font-family: "Chilanka";
 }
 
 .article-stats{
@@ -529,7 +539,7 @@ body[data-theme="light"] .switch-theme-btn{
     font-size: 1.4rem;
 }
 
-.article-read-more{
+.article-read-more, .about-me-open-cli-btn{
     color: var(--dark-navy);
     background-image: var(--btn-background);
     border: 1px solid var(--contrast-color);
@@ -543,8 +553,100 @@ body[data-theme="light"] .switch-theme-btn{
     position: inherit;
     display: block;
     width: fit-content;
+    font-size: 1rem;
+}
+body[data-theme="light"] .article-read-more, body[data-theme="light"] .about-me-open-cli-btn{
+    color: var(--white);
 }
 
+.about-me-open-cli-btn{
+    background-image: -webkit-linear-gradient(-70deg,#db469f,#2188ff);
+}
+.modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--light-blue);
+}
+
+.terminal{
+    overflow: auto;
+    margin: calc(10vh - 50px) auto;
+    position: relative;
+    padding: 50px 20px;
+    background-color: #0e1019;
+    animation: modal 1s;
+    width: 80%;
+    height: 80%;
+    animation-fill-mode: forwards;
+    position: relative;
+    font-family: "Anonymous Pro";
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    opacity: .95;
+}
+
+.terminal a{
+    color: #81e2de;
+}
+
+.modal-close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@keyframes modal{
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(.92);
+    }
+    80%{
+        transform: scale(.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.terminal-user{
+    color: #47e295;
+    margin-right: .5rem;
+}
+
+.terminal-row{
+    display: flex;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.terminal-log{
+    word-wrap: break-word;
+    min-width: 30%;
+    display: block;
+}
+
+.terminal-input-command{
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+}
+.terminal-input-command:focus{
+    outline: none;
+}
 
 @media only screen and (min-width: 1400px){
     .intro, .projects{
@@ -562,6 +664,13 @@ body[data-theme="light"] .switch-theme-btn{
 @media only screen and (max-width: 1080px){
     .container{
         padding: 0 100px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 860px){
+    .article{
+        margin: 1rem;
+        width: calc(50% - 4.4rem);
     }
 }
 
@@ -724,13 +833,14 @@ body[data-theme="light"] .switch-theme-btn{
     .article-title{
         margin: .4rem;
         margin-right: .8rem;
+        font-size: 2.25rem;
     }
     .article-stats{
         left: 1.2rem;
         bottom: .8rem;
     }
-    .switch-theme{
-        bottom: 1.2rem;
+    .site-setting{
+        bottom: 25%;
         right: 1.2rem;
     }
 }
@@ -772,6 +882,14 @@ body[data-theme="light"] .switch-theme-btn{
     }
     .article-title{
         font-size: 20px;
+    }
+    .terminal{
+        width: -webkit-fill-available;
+        height: 100%;
+        margin: 0;
+    }
+    .terminal-row{
+        font-size: .9rem;
     }
 }
 
