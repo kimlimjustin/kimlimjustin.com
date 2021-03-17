@@ -1,7 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Chilanka");
-@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+@font-face{
+    font-family: "Roboto";
+    src: url("./Assets/Fonts/Roboto/Roboto-Regular.ttf")format('truetype');
+}
+@font-face{
+    font-family: "Lato";
+    src: url("./Assets/Fonts/Lato/Lato.ttf")format('truetype');
+}
+@font-face{
+    font-family: "Chilanka";
+    src: url("./Assets/Fonts/Chilanka/Chilanka-Regular.ttf")format('truetype');
+}
+
+@font-face{
+    font-family: "Anonymous Pro";
+    src: url("./Assets/Fonts/Anonymous_Pro/AnonymousPro.ttf")format('truetype');
+}
 
 :root{
     --dark-navy: #020c1b;
@@ -601,7 +614,7 @@ body[data-theme="light"] .article-read-more{
     background-color: #16161e !important;
     color: rgb(120, 124, 153) !important;
 }
-.terimanl[data-theme="atom"]{
+.terminal[data-theme="atom"]{
     background-color: #161719 !important;
     color: rgb(197, 200, 198) !important;
 }
