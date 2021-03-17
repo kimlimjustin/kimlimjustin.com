@@ -19,6 +19,7 @@ body{
     margin: 0;
     padding: 0;
     transition: .5s;
+    height: 100%;
 }
 
 html{
@@ -370,16 +371,13 @@ body[data-theme="light"] .project-content-description{
     position: relative;
 }
 
-.contacts::before{
-    position: absolute;
-    content: "Get In Touch";
+.contacts-title{
     font-size: clamp(40px, 8vw, 80px);
     font-weight: bold;
     text-align: center;
-    left: 50%;
     z-index: -3;
     width: 100%;
-    transform: translate(-50%, -25px);
+    margin: 1rem 0;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(-70deg,#804eda,#71c2a3);
@@ -449,7 +447,6 @@ body[data-theme="light"] .contacts-link-btn{
     bottom: 30%;
     right: 4rem;
     display: block;
-    cursor: pointer;
     z-index: 7;
     height: 2.5rem;
 }
@@ -462,6 +459,7 @@ body[data-theme="light"] .contacts-link-btn{
     margin: 1rem 0;
     display: block;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 body[data-theme="light"] .switch-theme-btn .terminal-version-btn{
@@ -539,7 +537,7 @@ body[data-theme="light"] .switch-theme-btn .terminal-version-btn{
     font-size: 1.4rem;
 }
 
-.article-read-more, .about-me-open-cli-btn{
+.article-read-more{
     color: var(--dark-navy);
     background-image: var(--btn-background);
     border: 1px solid var(--contrast-color);
@@ -555,13 +553,10 @@ body[data-theme="light"] .switch-theme-btn .terminal-version-btn{
     width: fit-content;
     font-size: 1rem;
 }
-body[data-theme="light"] .article-read-more, body[data-theme="light"] .about-me-open-cli-btn{
+body[data-theme="light"] .article-read-more{
     color: var(--white);
 }
 
-.about-me-open-cli-btn{
-    background-image: -webkit-linear-gradient(-70deg,#db469f,#2188ff);
-}
 .modal{
     position: fixed;
     height: 100%;
@@ -576,20 +571,59 @@ body[data-theme="light"] .article-read-more, body[data-theme="light"] .about-me-
 
 .terminal{
     overflow: auto;
-    margin: calc(10vh - 50px) auto;
+    margin: 10vh auto;
     position: relative;
     padding: 50px 20px;
     background-color: #0e1019;
     animation: modal 1s;
     width: 80%;
-    height: 80%;
+    height: calc(80% - 100px);
     animation-fill-mode: forwards;
     position: relative;
     font-family: "Anonymous Pro";
-    border: 1px solid var(--white);
+    border: .05rem solid var(--white);
     border-radius: 4px;
     opacity: .95;
 }
+
+.terminal[data-theme="dark"]{
+    background-color: #0e1019 !important;
+    color: var(--white) !important;
+}
+.terminal[data-theme="light"]{
+    background-color: #f7f7f7 !important;
+    color: var(--navy) !important;
+}
+.terminal[data-theme="sky"]{
+    background-color: #673ab7 !important;
+}
+.terminal[data-theme="tokyo night"]{
+    background-color: #16161e !important;
+    color: rgb(120, 124, 153) !important;
+}
+.terimanl[data-theme="atom"]{
+    background-color: #161719 !important;
+    color: rgb(197, 200, 198) !important;
+}
+body[data-theme="light"] .terminal{
+    background-color: #f7f7f7;
+    color: var(--navy);
+}
+body[data-theme="light"] .terminal a{
+    color: #76a7a5 !important;
+}
+
+body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"] .terminal-user{
+    color: var(--sky);
+}
+
+.terminal[data-theme="tokyo night"] .terminal-user{
+    color: rgb(65, 166, 181) !important;
+}
+.terminal[data-theme="atom"] .terminal-user{
+    color: rgb(133, 190, 253) !important;
+}
+
 
 .terminal a{
     color: #81e2de;
@@ -885,8 +919,9 @@ body[data-theme="light"] .article-read-more, body[data-theme="light"] .about-me-
     }
     .terminal{
         width: -webkit-fill-available;
-        height: 100%;
+        height: calc(100% - 4.1rem);
         margin: 0;
+        padding: 2rem;
     }
     .terminal-row{
         font-size: .9rem;

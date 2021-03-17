@@ -47,9 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // Articles
+    let ARTICLES = [] // variable used in terminal
     fetch('https://dev.to/api/articles?username=kimlimjustin')
     .then(response => response.json())
     .then(result => {
+        ARTICLES = result;
         let recentArticles = result.slice(0,4);
         recentArticles.forEach(article => {
             let articleElement = document.createElement('div');
@@ -62,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <path d="M2.821 12.794a6.5 6.5 0 017.413-10.24h-.002L5.99 6.798l1.414 1.414 4.242-4.242a6.5 6.5 0 019.193 9.192L12 22l-9.192-9.192.013-.014z"></path>
                 </svg>
                 <span>${article.public_reactions_count}</span>
-                <a href="${article.url}" class="article-link-btn" target="_blank">
+                <a href="${article.url}" class="article-link-btn" target="_blank" rel="noopener">
                     <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
             </div>`;
@@ -120,37 +122,74 @@ document.addEventListener("DOMContentLoaded", () => {
             terminalElement.insertBefore(lastInputElement, outputElement)
         }
 
-        const inputTerminalHandler = e => {
-            let input = e.target.value;
-            let output = `'${input.split(" ")[0]}' is not recognized as a command.`;
-            if(input === "help"){
-                output = `<ul>
-                <li>about ...... About me</li>
-                <li>clear ...... Clear terminal log</li>
-                <li>exit ....... Exit terminal session</li>
-                <li>help ....... Showing available commands</li>
-                <li>links ...... Social media links</li>
-                </ul>`
-            }else if(input === "about"){
-                output = "Hello, I'm Justin Maximillian Kimlim from Indonesia, a 15 y.o. junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone."
-            }else if(input === "links"){
-                output = `<ul>
-                <li><a href="https://instagram.com/justin_kimlim_" target="_blank" rel="noopener">Instagram</a></li>
-                <li><a href="https://github.com/kimlimjustin" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="https://dev.to/kimlimjustin" target="_blank" rel="noopener">Dev.to</a></li>
-                <li><a href="https://reddit.com/kimlimjustin" target="_blank" rel="noopener">Reddit</a></li>
-                <li><a href="mailto:kimlimjustin@gmail.com" target="_blank" rel="noopener">Email</a></li>
-                </ul>`
-            }
-            RETURN_VALUE(input, output)
+        let PREVIOUS_COMMANDS= [];
 
-            if(input === "clear" || input === "cls") REMOVE_LOG()
-            if(input === "exit") EXIT()
-            inputTerminal.value = "";
-            terminalElement.scrollTop = terminalElement.scrollHeight;
+        const inputTerminalHandler = e => {
+            if(e.key === "Enter" && e.target.value){
+                let input = e.target.value;
+                let output = `'${input.split(" ")[0]}' is not recognized as a command.`;
+                PREVIOUS_COMMANDS.push(input)
+                if(input === "help"){
+                    output = `<ul>
+                    <li>about ......... About me</li>
+                    <li>clear ......... Clear terminal log</li>
+                    <li>exit .......... Exit terminal session</li>
+                    <li>help .......... Showing available commands</li>
+                    <li>links ......... Social media links</li>
+                    <li>theme ......... Change theme of terminal</li>
+                    <li>articles ...... Recent articles</li>
+                    </ul>`
+                }else if(input === "about"){
+                    output = "Hello, I'm Justin Maximillian Kimlim from Indonesia, a 15 y.o. junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone."
+                }else if(input === "links"){
+                    output = `<ul>
+                    <li><a href="https://instagram.com/justin_kimlim_" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://github.com/kimlimjustin" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://dev.to/kimlimjustin" target="_blank" rel="noopener">Dev.to</a></li>
+                    <li><a href="https://reddit.com/kimlimjustin" target="_blank" rel="noopener">Reddit</a></li>
+                    <li><a href="mailto:kimlimjustin@gmail.com" target="_blank" rel="noopener">Email</a></li>
+                    </ul>`
+                }else if(input.split(' ')[0] === "theme"){
+                    const availableThemes = ['light', 'dark', 'sky', 'tokyo night', 'atom'];
+                    if(input.trim() === "theme"){
+                        output = `<span>Usage: theme [option]. Available themes:</span><ul>${availableThemes.map(theme => `<li>${theme}</li>`).join('')}</ul>`
+                    }else{
+                        let inputTheme = input.split(' ').slice(1).join(' ');
+                        if(availableThemes.indexOf(inputTheme) === -1) output = `${inputTheme} is not recognized as a theme`;
+                        else{
+                            output = "";
+                            terminalElement.dataset.theme = inputTheme
+                        }
+                    }
+                }else if(input === "articles"){
+                    console.log(ARTICLES)
+                    output = `<ul>${ARTICLES.map(article => `<li><a href = "${article.url}" target="_blank" rel="noopener">${article.title}</a></li>`).join('')}</ul>`
+                }
+                RETURN_VALUE(input, output)
+
+                if(input === "clear" || input === "cls") REMOVE_LOG()
+                if(input === "exit") EXIT()
+                inputTerminal.value = "";
+                terminalElement.scrollTop = terminalElement.scrollHeight;
+            }
         }
 
-        inputTerminal.addEventListener("change", inputTerminalHandler)
+        inputTerminal.addEventListener("keypress", inputTerminalHandler)
+        let i = PREVIOUS_COMMANDS.length
+        document.addEventListener('keydown', e => {
+            if(e.keyCode === 38){
+                e.preventDefault()
+                i > 0 ? i = i - 1: i = PREVIOUS_COMMANDS.length -1
+                console.log(PREVIOUS_COMMANDS, PREVIOUS_COMMANDS[i], i)
+                if(PREVIOUS_COMMANDS[i]) inputTerminal.value = PREVIOUS_COMMANDS[i]
+                inputTerminal.focus()
+            }else if(e.keyCode === 40){
+                e.preventDefault()
+                i < PREVIOUS_COMMANDS.length -1 ? i = i + 1: i = 0
+                if(PREVIOUS_COMMANDS[i]) inputTerminal.value = PREVIOUS_COMMANDS[i]
+                inputTerminal.focus()
+            }
+        })
         terminalElement.addEventListener("click", () => inputTerminal.focus())
         document.body.addEventListener("click", e => {
             if(e.target === modal) EXIT()
