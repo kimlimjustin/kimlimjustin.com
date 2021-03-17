@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let output = `'${input.split(" ")[0]}' is not recognized as a command.`;
                 PREVIOUS_COMMANDS.push(input)
                 if(input === "help"){
-                    output = `<ul>
+                    output = `<span>Some available commands are:</span><ul>
                     <li>about ......... About me</li>
                     <li>clear ......... Clear terminal log</li>
                     <li>exit .......... Exit terminal session</li>
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li>links ......... Social media links</li>
                     <li>theme ......... Change theme of terminal</li>
                     <li>articles ...... Recent articles</li>
-                    </ul>`
+                    </ul><span>Besides, there are some hidden feature, try to find it out!</span>`
                 }else if(input === "about"){
                     output = "Hello, I'm Justin Maximillian Kimlim from Indonesia, a 15 y.o. junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone."
                 }else if(input === "links"){
@@ -162,8 +162,46 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
                     }
                 }else if(input === "articles"){
-                    console.log(ARTICLES)
                     output = `<ul>${ARTICLES.map(article => `<li><a href = "${article.url}" target="_blank" rel="noopener">${article.title}</a></li>`).join('')}</ul>`
+                }else if(input === "github"){
+                    let github = window.open('https://github.com/kimlimjustin', "_blank");
+                    github.focus()
+                    output = ""
+                }else if(input === "https://kimlim.net" || input === "kimlim.net" || input === "http://kimlim.net"){
+                    output = `This website is designed and built by Justin Maximillian Kimlim using HTML, CSS and Vanilla JavaScript and was inspired by several websites over the internet. Find out the repo of this website <a href = "https://github.com/kimlimjustin/kimlimjustin.github.io" target="_blank" rel="noopener">here.</a>`
+                }else if(input === "hello"){
+                    window.open('mailto:kimlimjustin@gmail.com?Subject=Hello');
+                    output = `Say hello to me <a href="mailto:kimlimjustin@gmail.com?Subject=Hello">here</a>`;
+                }else if(input === "refresh"){
+                    location.reload()
+                    output = ""
+                }else if(input === "whoami"){
+                    output = "You are human when you type this command :)"
+                }else if(input === "pwd"){
+                    output = "https://kimlim.net"
+                }else if(input.split(' ')[0] === "sudo"){
+                    output = "Are you thinking you are on linux man?"
+                }else if(input.split(' ')[0] === "cd"){
+                    output = "Where do you want to go? This is just a website that simulates terminal haha."
+                }else if(input === "ls"){
+                    output = "Nothing here xd."
+                }else if(input.split(' ')[0] === "ping"){
+                    output = "Where do you want to ping to? Haha"
+                }else if(input.split(' ')[0] === "echo"){
+                    output = input.split(' ').slice(1).join(' ')
+                }else if(input.split(' ')[0] === "kill"){
+                    output = "Please don't kill me 😆😆"
+                }else if(input.split(' ')[0] === "man"){
+                    output = "What?"
+                }else if(input.split(' ')[0] === "shutdown"){
+                    output = "Wait? what???"
+                }else if(input === "whoareu" || input === "whoareyou"){
+                    output = `I'm human :) Contact me <a href = "kimlimjustin@gmail.com">here</a>`
+                }else if(input === "languages" || input === "language"){
+                    output = "I speak Indonesian, English, Chinese and Japanese. I code in JavaScript, Python in most and some others."
+                }else if(input === "clear cache"){
+                    localStorage.clear()
+                    output = "Localstorage has been cleared :)"
                 }
                 RETURN_VALUE(input, output)
 
