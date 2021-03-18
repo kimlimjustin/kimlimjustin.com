@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(".topnav-menu").style.width = '0vw';
             })
         })
+        window.addEventListener("resize", () => {
+            document.querySelector(".topnav-menu").style.width = '0vw';
+        })
     })
     AOS.init()
     fetch('https://api.github.com/repos/kimlimjustin/kimlimjustin.github.io')
@@ -45,6 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.dataset.theme = newTheme
         localStorage.setItem('theme', newTheme)
     })
+
+    let PROJECTS = [] // variable used in terminal
+    fetch('https://gh-pinned-repos-5l2i19um3.vercel.app/?username=kimlimjustin')
+    .then(response => response.json())
+    .then(result =>PROJECTS = result)
 
     // Articles
     let ARTICLES = [] // variable used in terminal
@@ -138,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li>links ......... Social media links</li>
                     <li>theme ......... Change theme of terminal</li>
                     <li>articles ...... Recent articles</li>
+                    <li>projects ...... My pinned projects on GitHub</li>
                     </ul><span>Besides, there are some hidden feature, try to find it out!</span>`
                 }else if(input === "about"){
                     output = "Hello, I'm Justin Maximillian Kimlim from Indonesia, a 15 y.o. junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone."
@@ -169,9 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     output = ""
                 }else if(input === "https://kimlim.net" || input === "kimlim.net" || input === "http://kimlim.net"){
                     output = `This website is designed and built by Justin Maximillian Kimlim using HTML, CSS and Vanilla JavaScript and was inspired by several websites over the internet. Find out the repo of this website <a href = "https://github.com/kimlimjustin/kimlimjustin.github.io" target="_blank" rel="noopener">here.</a>`
-                }else if(input === "hello"){
+                }else if(input === "hello" || input === "hi"){
                     window.open('mailto:kimlimjustin@gmail.com?Subject=Hello');
-                    output = `Say hello to me <a href="mailto:kimlimjustin@gmail.com?Subject=Hello">here</a>`;
+                    output = `Say hello to me <a href="mailto:kimlimjustin@gmail.com?Subject=Hello">here!</a>`;
                 }else if(input === "refresh"){
                     location.reload()
                     output = ""
@@ -202,6 +211,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 }else if(input === "clear cache"){
                     localStorage.clear()
                     output = "Localstorage has been cleared :)"
+                }else if(input === "date"){
+                    output = new Date()
+                }else if(input === "projects"){
+                    output = `<span>My pinned repositories:</span>
+                    <ul>${PROJECTS.map(repo => `<li><a href="${repo.link}" target="_blank" rel="noopener">${repo.owner}/${repo.repo}</a> (${repo.description})</li>`).join('')}</ul>`
+                }else if(input === "fork" || input == "star"){
+                    let repo = window.open('https://github.com/kimlimjustin/kimlimjustin.github.io', "_blank");
+                    repo.focus()
+                    output = ""
                 }
                 RETURN_VALUE(input, output)
 
