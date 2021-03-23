@@ -33,6 +33,7 @@ body{
     padding: 0;
     transition: .5s;
     height: 100%;
+    width: 100%;
 }
 
 html{
@@ -325,6 +326,8 @@ body[data-theme="light"] .about-me-pp img{
 
 .project-preview img{
     width: -webkit-fill-available;
+    width: fill-available;
+    width: -moz-available;
     display: block;
 }
 
@@ -563,7 +566,7 @@ body[data-theme="light"] .switch-theme-btn .terminal-version-btn{
     margin: 0 auto;
     position: inherit;
     display: block;
-    width: fit-content;
+    width: max-content;
     font-size: 1rem;
 }
 body[data-theme="light"] .article-read-more{
@@ -877,6 +880,8 @@ body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"]
     }
     .article{
         width: -webkit-fill-available;
+        width: fill-available;
+        width: -moz-available;
         padding: .6rem;
         margin: 1rem;
         width: calc(100% - 3.2rem);
@@ -909,6 +914,8 @@ body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"]
     .about-me-pp{
         padding: 40px;
         width: -webkit-fill-available;
+        width: fill-available;
+        width: -moz-available;
         z-index: -1;
     }
     .about-me-pp::before{
@@ -936,6 +943,8 @@ body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"]
     }
     .terminal{
         width: -webkit-fill-available;
+        width: -moz-available;
+        width: fill-available;
         height: calc(100% - 4.1rem);
         margin: 0;
         padding: 2rem;
