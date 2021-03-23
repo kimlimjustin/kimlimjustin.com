@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Deteck theme preference
     if(localStorage.getItem('theme')) document.body.dataset.theme = localStorage.getItem('theme')
     else{
-        console.log(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)'))
         let themePreference = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark": "light";
         localStorage.setItem('theme', themePreference);
         document.body.dataset.theme = themePreference;
@@ -236,7 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if(e.keyCode === 38){
                 e.preventDefault()
                 i > 0 ? i = i - 1: i = PREVIOUS_COMMANDS.length -1
-                console.log(PREVIOUS_COMMANDS, PREVIOUS_COMMANDS[i], i)
                 if(PREVIOUS_COMMANDS[i]) inputTerminal.value = PREVIOUS_COMMANDS[i]
                 inputTerminal.focus()
             }else if(e.keyCode === 40){

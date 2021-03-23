@@ -25,6 +25,8 @@
     --contrast-color: #4fe0be;
     --violet: #d19ff5;
     --btn-background: linear-gradient(var(--sky), var(--contrast-color));
+    scrollbar-color: var(--sky) var(--light-blue) !important;
+    scrollbar-width: thin !important;
 }
 
 body{
