@@ -1,0 +1,20 @@
+{
+    "availableLanguages": ["Bahasa Indonesia (id-ID)", "English (en-US)", "中文简体 (zh-CN)", "中文繁體 (zh-TW)", "日本語 (ja-JP)"],
+    "availableLanguagesCode": ["id-ID", "en-US", "zh-CN", "zh-TW", "ja-JP"],
+    "resources": {
+        "Hi, this is": {
+            "id-ID": "Hai, ini adalah",
+            "en-US": "Hi, this is",
+            "zh-CN": "嗨，这是",
+            "zh-TW": "嗨, 這是",
+            "ja-JP": "こんにちは、これは"
+        },
+        "I'm a junior high school student who loves programming": {
+            "id-ID": "Saya adalah seorang siswa SMP yang menyukai pemrograman",
+            "en-US": "I'm a junior high school student who loves programming",
+            "zh-CN": "我是一名热爱编程的初中生",
+            "zh-TW": "我是一名熱愛編程的國中生",
+            "ja-JP": "僕はプログラミングが大好きな中学生"
+        }
+    }
+}
