@@ -433,6 +433,7 @@ body[data-theme="light"] .contacts-content{
     font-size: 1.25rem;
     transition: .5s;
     transition-timing-function: ease-out;
+    height: fit-content;
 }
 
 body[data-theme="light"] .contacts-link-btn{

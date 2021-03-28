@@ -91,6 +91,25 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(() => document.querySelector("#articles").parentNode.removeChild(document.querySelector("#articles")))
 
+    // Read JSON file
+    const readJSONFile = (file, callback) => {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
+        }
+        rawFile.send(null);
+    }
+    let multilingual;
+    readJSONFile('multilingual.json', text =>{
+        multilingual = JSON.parse(text)
+    })
+
+    let currentLang = "en-US";
+
     // Terminal Version
     document.querySelector(".terminal-version-btn").addEventListener("click", () => {
         const modal = document.querySelector(".modal");
@@ -146,6 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li>theme ......... Change theme of terminal</li>
                     <li>articles ...... Recent articles</li>
                     <li>projects ...... My pinned projects on GitHub</li>
+                    <li>lang .......... Change language of this website</li>
                     </ul><span>Besides, there are some hidden feature, try to find it out!</span>`
                 }else if(input === "about"){
                     output = "Hello, I'm Justin Maximillian Kimlim from Indonesia, a 15 y.o. junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone."
@@ -219,6 +239,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     let repo = window.open('https://github.com/kimlimjustin/kimlimjustin.github.io', "_blank");
                     repo.focus()
                     output = ""
+                }else if(input.split(' ')[0] === "lang" || input.split(' ')[0] === "language"){
+                    if(input.trim() === "lang" || input.trim() === "language"){
+                        output = `<span>Usage: lang [language code]. Available languages:<ul>${multilingual.availableLanguages.map(lang => `<li>${lang}</li>`).join('')}</span>`
+                    }else{
+                        let langCode = input.split(' ').slice(1).join(' ');
+                        if(multilingual.availableLanguagesCode.indexOf(langCode) === -1) output = `${langCode} is not recognized as language code.`
+                        else{
+                            Object.keys(multilingual.resources).forEach(en =>{
+                                findAndReplaceDOMText(document.body, {
+                                    find: multilingual.resources[en][currentLang] || en,
+                                    replace: multilingual.resources[en][langCode]
+                                })
+                            })
+                            output = ""
+                        }
+                        currentLang = langCode;
+                        document.querySelector("html").setAttribute("lang", langCode);
+                    }
                 }
                 RETURN_VALUE(input, output)
 
