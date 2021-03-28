@@ -255,6 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             output = ""
                         }
                         currentLang = langCode;
+                        document.querySelector("html").setAttribute("lang", langCode);
                     }
                 }
                 RETURN_VALUE(input, output)
