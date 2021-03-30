@@ -104,11 +104,40 @@ document.addEventListener("DOMContentLoaded", () => {
         rawFile.send(null);
     }
     let multilingual;
-    readJSONFile('multilingual.json', text =>{
-        multilingual = JSON.parse(text)
-    })
 
     let currentLang = "en-US";
+
+    const changeSelectedLang = langCode => {
+        document.querySelector(".lang-select").childNodes.forEach(child => {
+            if(child.value === langCode) child.selected = true
+            else child.selected = false
+        })
+    }
+
+    const switchLang = langCode => {
+        Object.keys(multilingual.resources).forEach(en =>{
+            findAndReplaceDOMText(document.body, {
+                find: multilingual.resources[en][currentLang] || en,
+                replace: multilingual.resources[en][langCode]
+            })
+        })
+        currentLang = langCode
+        document.querySelector("html").setAttribute("lang", langCode);
+    }
+
+    readJSONFile('multilingual.json', text =>{
+        multilingual = JSON.parse(text)
+        Object.keys(multilingual.langCode).forEach(lang => {
+            let option = document.createElement("option");
+            option.innerText = lang;
+            option.value = multilingual.langCode[lang];
+            document.querySelector(".lang-select").appendChild(option);
+        })
+        changeSelectedLang("en-US");
+        document.querySelector(".lang-select").addEventListener("change", e => {
+            switchLang(e.target.value)
+        })
+    })
 
     // Terminal Version
     document.querySelector(".terminal-version-btn").addEventListener("click", () => {
@@ -246,16 +275,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         let langCode = input.split(' ').slice(1).join(' ');
                         if(multilingual.availableLanguagesCode.indexOf(langCode) === -1) output = `${langCode} is not recognized as language code.`
                         else{
-                            Object.keys(multilingual.resources).forEach(en =>{
-                                findAndReplaceDOMText(document.body, {
-                                    find: multilingual.resources[en][currentLang] || en,
-                                    replace: multilingual.resources[en][langCode]
-                                })
-                            })
+                            switchLang(langCode)
                             output = ""
                         }
-                        currentLang = langCode;
-                        document.querySelector("html").setAttribute("lang", langCode);
+                        changeSelectedLang(langCode)
                     }
                 }
                 RETURN_VALUE(input, output)

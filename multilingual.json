@@ -1,6 +1,13 @@
 {
     "availableLanguages": ["Bahasa Indonesia (id-ID)", "English (en-US)", "中文简体 (zh-CN)", "中文繁體 (zh-TW)", "日本語 (ja-JP)"],
     "availableLanguagesCode": ["id-ID", "en-US", "zh-CN", "zh-TW", "ja-JP"],
+    "langCode": {
+        "Bahasa Indonesia (id-ID)": "id-ID",
+        "English (en-US)": "en-US",
+        "中文简体 (zh-CN)": "zh-CN",
+        "中文繁體 (zh-TW)": "zh-TW",
+        "日本語 (ja-JP)": "ja-JP"
+    },
     "resources": {
         "Hi, this is": {
             "id-ID": "Hai, ini adalah",
@@ -33,9 +40,9 @@
         "Hello, I'm Justin Maximillian Kimlim from Indonesia, a junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone":{
             "id-ID": "Halo, saya Justin Maximillian Kimlim, siswa SMP dengan hobi ilmu komputer, pemrograman, dan fiksi ilmiah.",
             "en-US": "Hello, I'm Justin Maximillian Kimlim from Indonesia, a junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone",
-            "zh-CN": "哈啰，我是一名来自印尼的初中生， Justin Maximillian Kimlim，喜好计算机学，编程以及科幻小说。",
-            "zh-TW": "哈囉, 我是一名來自印尼的國中生，Justin Maximillian Kimlim, 喜好計算機學, 编程以及科幻小說",
-            "ja-JP": "こんにちは、私は Justin Maximillian Kimlim です。コンピューターサイエンス、プログラミング、サイエンフィクションをしゅみとするの中学生です。"
+            "zh-CN": "哈啰，我是一名来自印尼的初中生， Justin Maximillian Kimlim。",
+            "zh-TW": "哈囉, 我是一名來自印尼的國中生，Justin Maximillian Kimlim",
+            "ja-JP": "こんにちは、私は Justin Maximillian Kimlim です。コンピューターサイエンス、プログラミング、サイエンフィクションを趣味とするの中学生です。"
         },
         "Recent Articles": {
             "id-ID": "Artikel Terbaru",
@@ -68,8 +75,8 @@
         "Get In Touch": {
             "id-ID": "Kontak Saya",
             "en-US": "Get In Touch",
-            "zh-CN": "联系",
-            "zh-TW": "聯繫",
+            "zh-CN": "联系方式",
+            "zh-TW": "聯繫方式",
             "ja-JP": "僕と連絡を取る"
         },
         "Contact": {
@@ -92,6 +99,20 @@
             "zh-CN": "打招呼",
             "zh-TW": "打招呼",
             "ja-JP": "こんにちはと言う！"
+        },
+        "Language": {
+            "id-ID": "Bahasa",
+            "en-US": "Language",
+            "zh-CN": "语言",
+            "zh-TW": "語言",
+            "ja-JP": "言語"
+        },
+        "Designed & Built by Justin Maximillian Kimlim": {
+            "id-ID": "Didesain dan dibuat oleh Justin Maximillian Kimlim",
+            "en-US": "Designed & Built by Justin Maximillian Kimlim",
+            "zh-CN": "设计与建设者为本人",
+            "zh-TW": "設計與建設者為本人",
+            "ja-JP": "僕によって設計および構築されました"
         }
     }
 }

@@ -266,6 +266,10 @@ body[data-theme="light"] .topnav-menu a, body[data-theme="light"] .topnav-name{
 .about-me-text{
     color: var(--violet);
 }
+
+html[lang="zh-CN"] .about-me-content, html[lang="zh-TW"] .about-me-content{
+    text-align: none;
+}
 body[data-theme="light"] .about-me-text{
     color: #280b3e;
 }
@@ -434,6 +438,7 @@ body[data-theme="light"] .contacts-content{
     transition: .5s;
     transition-timing-function: ease-out;
     height: fit-content;
+    height: -moz-fit-content;
 }
 
 body[data-theme="light"] .contacts-link-btn{
@@ -699,6 +704,25 @@ body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"]
 }
 .terminal-input-command:focus{
     outline: none;
+}
+
+.copyright-notice{
+    margin: 0.5rem;
+}
+
+.lang{
+    margin: 0.5rem 0 1rem 0;
+}
+
+.lang-select{
+    background-color: transparent;
+    color: var(--contrast-color);
+    border: 1px solid transparent;
+    -moz-appearance: none;
+    line-height: 1rem;
+    width: fit-content;
+    width: -moz-fit-content;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 1400px){
