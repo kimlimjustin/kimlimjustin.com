@@ -248,6 +248,7 @@ body[data-theme="light"] .topnav-menu a{
     font-size: 1.5rem;
     margin: -.5rem 1rem .5rem 0;
     display: none;
+    cursor: pointer;
 }
 
 .about-me{
@@ -852,6 +853,9 @@ body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"]
         text-align: center;
         font-size: 1.3rem;
         margin: 3rem;
+        color: var(--contrast-color);
+    }
+    body[data-theme="light"] .topnav-menu a{
         color: var(--contrast-color);
     }
     .topnav-exit-menu{
