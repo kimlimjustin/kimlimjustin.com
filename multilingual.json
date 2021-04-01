@@ -113,6 +113,13 @@
             "zh-CN": "设计与建设者为本人",
             "zh-TW": "設計與建設者為本人",
             "ja-JP": "僕によって設計および構築されました"
+        },
+        "Switch Theme": {
+            "id-ID": "Ganti Tema",
+            "en-US": "Switch Theme",
+            "zh-CN": "切换主题",
+            "zh-TW": "切換主題",
+            "ja-JP": "テーマの切り替え"
         }
     }
 }

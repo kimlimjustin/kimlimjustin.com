@@ -21,7 +21,7 @@
     --navy: #0a0d1f;
     --sky: #9aa2ca;
     --light-blue: #c1c8ec;
-    --white: #fff;
+    --white: rgb(240, 229, 229);
     --contrast-color: #4fe0be;
     --violet: #d19ff5;
     --btn-background: linear-gradient(var(--sky), var(--contrast-color));
@@ -48,10 +48,10 @@ body[data-theme="dark"]{
 }
 
 body[data-theme="light"]{
-    --contrast-color: #6b63bf;
+    --contrast-color: #1ebb87;
     background-color: var(--white);
     color: var(--dark-navy);
-    --btn-background: linear-gradient(#5c69ad, #77549e);
+    --btn-background: linear-gradient(#3db8bd, #58a751);
 }
 
 ::-webkit-scrollbar {
@@ -153,12 +153,20 @@ body[data-theme="light"] .loading-animation{
     font-family: "Chilanka";
 }
 
+body[data-theme="light"] .intro-title{
+    background: -webkit-linear-gradient(-70deg, var(--navy), var(--dark-navy));
+}
+
 .intro-text{
     font-size: clamp(24px, 3.5vw, 35px);
 }
 
 .intro-heading{
     color: var(--contrast-color);
+}
+
+body[data-theme="light"] .intro-heading, body[data-theme="light"] .intro-text{
+    color: #151b3e;
 }
 
 .intro-btn{
@@ -171,10 +179,6 @@ body[data-theme="light"] .loading-animation{
     cursor: pointer;
     transition: 0.5s ;
     transition-timing-function: ease-out;
-}
-
-body[data-theme="light"] .intro-btn{
-    color: var(--white);
 }
 
 .intro-btn:hover{
@@ -193,7 +197,8 @@ body[data-theme="light"] .intro-btn{
     z-index: 10;
 }
 body[data-theme="light"] .topnav{
-    background-color: var(--sky);
+    background-color: var(--contrast-color);
+    color: var(--navy) !important;
     box-shadow:  0 4px 12px rgb(0 0 0 / 50%);
 }
 
@@ -231,8 +236,8 @@ body[data-theme="light"] .topnav{
     transition: .5s;
 }
 
-body[data-theme="light"] .topnav-menu a, body[data-theme="light"] .topnav-name{
-    color: var(--white);
+body[data-theme="light"] .topnav-menu a{
+    color: var(--navy);
 }
 .topnav-menu a:hover{
     color: var(--light-blue);
@@ -429,7 +434,7 @@ body[data-theme="light"] .contacts-content{
 }
 .contacts-link-btn{
     text-decoration: none;
-    background-image: var(--btn-background);
+    background-image: linear-gradient(#5c69ad, #77549e);
     border: 1px solid var(--sky);
     color: var(--dark-navy);
     border-radius: 15px;
@@ -486,8 +491,9 @@ body[data-theme="light"] .contacts-link-btn{
     cursor: pointer;
 }
 
-body[data-theme="light"] .switch-theme-btn .terminal-version-btn{
-    color: var(--white);
+body[data-theme="light"] .switch-theme-btn,body[data-theme="light"] .terminal-version-btn{
+    color: var(--light-blue);
+    fill: var(--light-blue);
 }
 
 .articles{
