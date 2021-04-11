@@ -3,7 +3,7 @@ This is [my personal website](https://kimlimjustin.github.io/) created using HTM
 
 | Demo | Demo |
 | ---- | --- |
-| ![Demo](https://drive.google.com/uc?export=view&id=16xCgS12bHYP3DeKxmPNGYbxdAOt-3HJj) | ![Demo](https://drive.google.com/uc?export=view&id=1P_dInyfUjONT4n1y8MQNnSeT80j4FjMq) |
+| ![Demo](https://drive.google.com/uc?export=view&id=12jAD0hDs1DNIhSt8GEK5o6zbVTIrg2Df) | ![Demo](https://drive.google.com/uc?export=view&id=1P_dInyfUjONT4n1y8MQNnSeT80j4FjMq) |
 
 ## Features
 - Loading animation using CSS
