@@ -1,3 +1,7 @@
+String.prototype.lowerize = function() {
+    return this.charAt(0).toLowerCase() + this.slice(1);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // Deteck theme preference
     if(localStorage.getItem('theme')) document.body.dataset.theme = localStorage.getItem('theme')
@@ -181,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const inputTerminalHandler = e => {
             if(e.key === "Enter" && e.target.value){
-                let input = e.target.value;
+                let input = e.target.value.lowerize();
                 let output = `'${input.split(" ")[0]}' is not recognized as a command.`;
                 PREVIOUS_COMMANDS.push(input)
                 if(input === "help"){
