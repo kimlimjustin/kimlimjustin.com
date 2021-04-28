@@ -2,6 +2,16 @@ String.prototype.lowerize = function() {
     return this.charAt(0).toLowerCase() + this.slice(1);
 }
 
+function detectBrowser() { 
+    if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+        return 'Chrome';
+    } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+        return 'Firefox';
+    } else {
+        return 'Other';
+    }
+} 
+
 document.addEventListener("DOMContentLoaded", () => {
     // Deteck theme preference
     if(localStorage.getItem('theme')) document.body.dataset.theme = localStorage.getItem('theme')
@@ -164,9 +174,30 @@ document.addEventListener("DOMContentLoaded", () => {
             REMOVE_LOG();
             inputTerminal.removeEventListener("change", inputTerminalHandler)
             modal.style.display = "none";
+            document.querySelector(".terminal").style.removeProperty('height')
+            document.querySelector(".terminal").style.removeProperty('margin')
+            document.querySelector(".terminal").style.removeProperty('padding')
+            document.querySelector(".terminal").style.removeProperty('width')
         }
         modal.querySelector(".modal-close-btn").addEventListener("click", () => {
             EXIT()
+        })
+
+        modal.querySelector(".modal-maximize-btn").addEventListener('click', () => {
+            document.querySelector(".terminal").style.height = "calc(100% - 4.1rem)"
+            document.querySelector(".terminal").style.margin = "0"
+            document.querySelector(".terminal").style.padding = "2rem"
+            switch(detectBrowser()){
+                case "Chrome":
+                    document.querySelector(".terminal").style.width = "-webkit-fill-available"
+                    break
+                case "Firefox":
+                    document.querySelector(".terminal").style.width = "-moz-available"
+                    break
+                default:
+                    document.querySelector(".terminal").style.width = "fill-available"
+                    break
+            }
         })
 
         const RETURN_VALUE = (inputValue, outputValue) => {

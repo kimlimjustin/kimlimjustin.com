@@ -660,13 +660,51 @@ body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"]
     color: #81e2de;
 }
 
-.modal-close-btn{
+.window-manager{
     position: absolute;
     right: 20px;
     top: 20px;
-    font-size: 3rem;
-    cursor: pointer;
 }
+
+.modal-maximize-btn, .modal-close-btn{
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #00ca4e;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    padding: .2rem;
+}
+
+.modal-maximize-btn{
+    background: #00ca4e;
+}
+
+.modal-maximize-btn:hover::after{
+    content: "□";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    columns: var(--contrast-color);
+}
+
+.modal-close-btn{
+    background: #ff4743;
+}
+
+.modal-close-btn:hover:after{
+    content: "×";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    columns: var(--contrast-color);
+}
+
 
 @keyframes modal{
     0%{
@@ -981,6 +1019,9 @@ body[data-theme="light"] .terminal .terminal-user, .terminal[data-theme="light"]
     }
     .article-title{
         font-size: 20px;
+    }
+    .modal-maximize-btn{
+        display: none;
     }
     .terminal{
         width: -webkit-fill-available;
