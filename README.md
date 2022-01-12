@@ -1,17 +1,34 @@
-## About
-This is [my personal website](https://kimlimjustin.github.io/) created using HTML, CSS and Vanilla JavaScript hosted using GitHub Pages.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-| Demo | Demo |
-| ---- | --- |
-| ![Demo](https://drive.google.com/uc?export=view&id=12jAD0hDs1DNIhSt8GEK5o6zbVTIrg2Df) | ![Demo](https://drive.google.com/uc?export=view&id=1P_dInyfUjONT4n1y8MQNnSeT80j4FjMq) |
+## Getting Started
 
-## Features
-- Loading animation using CSS
-- Animate on scroll using AOS library
-- Recent blog from dev.to using [DEV API](https://docs.forem.com/api/)
-- Dark theme and light theme
-- A terminal simulator built using Vanilla JavaScript
-- Multilingual Resources
+First, run the development server:
 
-## License
-[MIT](https://github.com/kimlimjustin/kimlimjustin.github.io/blob/master/LICENSE)
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
