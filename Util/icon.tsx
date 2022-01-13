@@ -151,7 +151,7 @@ export const FollowerIcon = () => {
     );
 };
 
-export const Terminal = () => {
+export const TerminalIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

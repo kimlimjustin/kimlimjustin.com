@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Typewriter } from '../../Util/typewriter';
-import { ABOUT_ME } from '../../Util/constant';
+import { MY_TITLE } from '../../Util/constant';
 
 const Intro = () => {
     return (
@@ -9,7 +9,7 @@ const Intro = () => {
                 <span className="intro-heading">Hi, this is</span>
                 <h1 className="intro-title">Justin Maximillian Kimlim</h1>
                 <p className="intro-text">
-                    I&apos;m a <Typewriter strings={ABOUT_ME}></Typewriter>
+                    I&apos;m a <Typewriter strings={MY_TITLE}></Typewriter>
                     <span className="cursor"></span>
                 </p>
                 <a href="mailto:kimlimjustin@gmail.com" className="intro-btn" rel="noopener">
