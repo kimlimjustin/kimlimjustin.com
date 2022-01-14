@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     }, [theme]);
 
     useEffect(() => {
-        fetch('https://api.github.com/repos/kimlimjustin/kimlimjustin.github.io')
+        fetch('https://api.github.com/repos/kimlimjustin/kimlimjustin.com')
             .then((response) => response.json())
             .then((result) => {
                 setGitHubStars(result.stargazers_count);
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                 <a href={GITHUB_LINK} className="github-stats" target="_blank" rel="noreferrer">
                     <FollowerIcon></FollowerIcon> <span>{GitHubFollowers}</span>
                 </a>{' '}
-                <a className="github-stats" href="https://github.com/kimlimjustin/kimlimjustin.github.io" target="_blank" rel="noopener noreferrer">
+                <a className="github-stats" href="https://github.com/kimlimjustin/kimlimjustin.com" target="_blank" rel="noopener noreferrer">
                     <StarsIcon></StarsIcon> <span>{GitHubStars}</span> <ForksIcon></ForksIcon> <span>{GitHubForks}</span>
                 </a>
             </div>

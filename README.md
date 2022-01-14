@@ -1,6 +1,6 @@
 ## About
 
-This is [my personal website](https://kimlimjustin.github.io/) created using Next.js. For the old version of this website, please visit [here](https://kimlimjustin.github.io/old/index.html).
+This is [my personal website](https://kimlimjustin.com/) created using Next.js. For the old version of this website, please visit [here](https://kimlimjustin.com/old/index.html).
 
 | Demo                                 | Demo                                |
 | ------------------------------------ | ----------------------------------- |
@@ -8,4 +8,4 @@ This is [my personal website](https://kimlimjustin.github.io/) created using Nex
 
 ## License
 
-[MIT](https://github.com/kimlimjustin/kimlimjustin.github.io/blob/master/LICENSE)
+[MIT](https://github.com/kimlimjustin/kimlimjustin.com/blob/master/LICENSE)

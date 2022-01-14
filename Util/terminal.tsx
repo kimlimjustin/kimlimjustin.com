@@ -155,14 +155,14 @@ const ProcessTerminalInput = (input: string) => {
             window.open('https://github.com/kimlimjustin', '_blank');
             output = <></>;
             break;
-        case 'https://kimlimjustin.github.io':
-        case 'kimlimjustin.github.io':
-        case 'http://kimlimjustin.github.io':
+        case 'https://kimlimjustin.com':
+        case 'kimlimjustin.com':
+        case 'http://kimlimjustin.com':
             output = (
                 <span>
                     This website is designed and built by Justin Maximillian Kimlim using HTML, CSS and Vanilla JavaScript and was inspired by several
                     websites over the internet. Find out the repo of this website{' '}
-                    <a href="https://github.com/kimlimjustin/kimlimjustin.github.io" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/kimlimjustin/kimlimjustin.com" target="_blank" rel="noopener noreferrer">
                         here.
                     </a>
                 </span>
@@ -185,7 +185,7 @@ const ProcessTerminalInput = (input: string) => {
             output = <span>You are human when you type this command :)</span>;
             break;
         case 'pwd':
-            output = <span>https://kimlimjustin.github.io</span>;
+            output = <span>https://kimlimjustin.com</span>;
             break;
         case 'sudo':
             output = <span>Are you thinking you are on linux man?</span>;
@@ -247,7 +247,7 @@ const ProcessTerminalInput = (input: string) => {
             break;
         case 'fork':
         case 'star':
-            window.open('https://github.com/kimlimjustin/kimlimjustin.github.io', '_blank');
+            window.open('https://github.com/kimlimjustin/kimlimjustin.com', '_blank');
             output = <></>;
             break;
     }
