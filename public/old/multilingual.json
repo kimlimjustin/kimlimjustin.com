@@ -1,0 +1,125 @@
+{
+    "availableLanguages": ["Bahasa Indonesia (id-ID)", "English (en-US)", "中文简体 (zh-CN)", "中文繁體 (zh-TW)", "日本語 (ja-JP)"],
+    "availableLanguagesCode": ["id-ID", "en-US", "zh-CN", "zh-TW", "ja-JP"],
+    "langCode": {
+        "Bahasa Indonesia (id-ID)": "id-ID",
+        "English (en-US)": "en-US",
+        "中文简体 (zh-CN)": "zh-CN",
+        "中文繁體 (zh-TW)": "zh-TW",
+        "日本語 (ja-JP)": "ja-JP"
+    },
+    "resources": {
+        "Hi, this is": {
+            "id-ID": "Hai, ini adalah",
+            "en-US": "Hi, this is",
+            "zh-CN": "嗨，这是",
+            "zh-TW": "嗨, 這是",
+            "ja-JP": "こんにちは、これは"
+        },
+        "I'm a junior high school student who loves programming": {
+            "id-ID": "Saya adalah seorang siswa SMP yang menyukai pemrograman",
+            "en-US": "I'm a junior high school student who loves programming",
+            "zh-CN": "我是一名热爱编程的初中生",
+            "zh-TW": "我是一名熱愛編程的國中生",
+            "ja-JP": "僕はプログラミングが大好きな中学生"
+        },
+        "About Me": {
+            "id-ID": "Tentang Saya",
+            "en-US": "About Me",
+            "zh-CN": "简介",
+            "zh-TW": "簡介",
+            "ja-JP": "私について"
+        },
+        "About": {
+            "id-ID": "Tentang",
+            "en-US": "About",
+            "zh-CN": "简介",
+            "zh-TW": "簡介",
+            "ja-JP": "私について"
+        },
+        "Hello, I'm Justin Maximillian Kimlim from Indonesia, a junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone":{
+            "id-ID": "Halo, saya Justin Maximillian Kimlim, siswa SMP dengan hobi ilmu komputer, pemrograman, dan fiksi ilmiah.",
+            "en-US": "Hello, I'm Justin Maximillian Kimlim from Indonesia, a junior high school student with hobbies of computer science, programming and science fiction. I enjoy making projects or even website clone",
+            "zh-CN": "哈啰，我是一名来自印尼的初中生， Justin Maximillian Kimlim。",
+            "zh-TW": "哈囉, 我是一名來自印尼的國中生，Justin Maximillian Kimlim",
+            "ja-JP": "こんにちは、私は Justin Maximillian Kimlim です。コンピューターサイエンス、プログラミング、サイエンフィクションを趣味とするの中学生です。"
+        },
+        "Recent Articles": {
+            "id-ID": "Artikel Terbaru",
+            "en-US": "Recent Articles",
+            "zh-CN": "最近的文章",
+            "zh-TW": "最近的文章",
+            "ja-JP": "最近の記事"
+        },
+        "Articles": {
+            "id-ID": "Artikel",
+            "en-US": "Articles",
+            "zh-CN": "文章",
+            "zh-TW": "文章",
+            "ja-JP": "記事"
+        },
+        "Recent Noteworthy Projects": {
+            "id-ID": "Proyek Terbaru",
+            "en-US": "Recent Noteworthy Projects",
+            "zh-CN": "最近项目",
+            "zh-TW": "最近項目",
+            "ja-JP": "最近のプロジェクト"
+        },
+        "Projects": {
+            "id-ID": "Proyek",
+            "en-US": "Projects",
+            "zh-CN": "项目",
+            "zh-TW": "項目",
+            "ja-JP": "プロジェクト"
+        },
+        "Get In Touch": {
+            "id-ID": "Kontak Saya",
+            "en-US": "Get In Touch",
+            "zh-CN": "联系方式",
+            "zh-TW": "聯繫方式",
+            "ja-JP": "僕と連絡を取る"
+        },
+        "Contact": {
+            "id-ID": "Hubungi",
+            "en-US": "Contact",
+            "zh-CN": "联系",
+            "zh-TW": "聯繫",
+            "ja-JP": "連絡する"
+        },
+        "Any questions or just want to say hi? My inbox is always open, and I'll try my best to get back to you": {
+            "id-ID": "Ada pertanyaan atau hanya ingin menyapa? Kotak masuk saya selalu terbuka, dan saya akan berusaha semaksimal mungkin untuk membalas anda!",
+            "en-US": "Any questions or just want to say hi? My inbox is always open, and I'll try my best to get back to you",
+            "zh-CN": "有什么问题或者只是想打个招呼吗？我的收件箱始终开放，我会尽力回复您！",
+            "zh-TW": "有什麼問題或者只是想打個招呼嗎? 我的收件箱始終開放, 我會盡力回復您!",
+            "ja-JP": "質問がありますか、それともただ挨拶したいですか？僕の受信トレイは常に開いています、そして僕は君に戻るために最善を尽くしますね"
+        },
+        "Say Hello": {
+            "id-ID": "Katakan Halo",
+            "en-US": "Say Hello",
+            "zh-CN": "打招呼",
+            "zh-TW": "打招呼",
+            "ja-JP": "こんにちはと言う！"
+        },
+        "Language": {
+            "id-ID": "Bahasa",
+            "en-US": "Language",
+            "zh-CN": "语言",
+            "zh-TW": "語言",
+            "ja-JP": "言語"
+        },
+        "Designed & Built by Justin Maximillian Kimlim": {
+            "id-ID": "Didesain dan dibuat oleh Justin Maximillian Kimlim",
+            "en-US": "Designed & Built by Justin Maximillian Kimlim",
+            "zh-CN": "设计与建设者为本人",
+            "zh-TW": "設計與建設者為本人",
+            "ja-JP": "僕によって設計および構築されました"
+        },
+        "Switch Theme": {
+            "id-ID": "Ganti Tema",
+            "en-US": "Switch Theme",
+            "zh-CN": "切换主题",
+            "zh-TW": "切換主題",
+            "ja-JP": "テーマの切り替え"
+        }
+    }
+}

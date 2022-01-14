@@ -1,0 +1,26 @@
+@font-face{
+    font-family: "Roboto";
+    src: url("./Fonts/Roboto/Roboto-Regular.ttf")format('truetype');
+}
+@font-face{
+    font-family: "Lato";
+    src: url("./Fonts/Lato/Lato.ttf")format('truetype');
+}
+
+body{
+    background-color: rgb(230, 225, 225);
+}
+.error-content{
+    text-align: center;
+}
+
+.error-status{
+    margin-top: 1.5rem;
+    font-size: 4.5rem;
+    font-family: "Roboto";
+}
+
+.error-description{
+    font-size: 1.5rem;
+    font-family: "Lato";
+} 
