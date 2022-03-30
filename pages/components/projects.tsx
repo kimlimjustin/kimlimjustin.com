@@ -40,7 +40,7 @@ const Projects = () => {
                             <div className="project-content-title">Wiz</div>
                             <p className="project-content-description">A simple, frameless, lightweight browser for screenshots.</p>
                         </div>
-                        <a href="https://github.com/kimlimjustin/xiz" className="project-link" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/kimlimjustin/wiz" className="project-link" target="_blank" rel="noreferrer">
                             <GitHubIcon />
                         </a>
                     </div>
