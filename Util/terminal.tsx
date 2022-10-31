@@ -49,7 +49,7 @@ fetch('https://dev.to/api/articles?username=kimlimjustin')
     });
 
 let pinned_projects: IProject[]; // variable used in terminal
-fetch('https://gh-pinned-repos.egoist.sh/?username=kimlimjustin')
+fetch('https://gh-pinned-repos.egoist.dev/?username=kimlimjustin')
     .then((response) => response.json())
     .then((result) => {
         pinned_projects = result;
