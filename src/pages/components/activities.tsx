@@ -1,6 +1,7 @@
 import { Poppins, Alfa_Slab_One } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import getActivities from "@/data/activities";
+import { encode } from "html-entities";
 
 const POPPINS = Poppins({
     weight: "400",
@@ -23,7 +24,7 @@ const Activities = () => {
             <h2 className={styles.activitiesSubtitle}>What do I do</h2>
             <div className={styles.activitiesList}>
                 {getActivities().map((activity) => (
-                    <div className={styles.activitiesItem}>
+                    <div className={styles.activitiesItem} key={activity.name}>
                         <div
                             className={[
                                 styles.activitiesItemName,
@@ -41,7 +42,7 @@ const Activities = () => {
                             alt={activity.name}
                         />
                         <p className={styles.activitiesItemBriefDescription}>
-                            {activity.brief_description}
+                            {encode(activity.brief_description)}
                         </p>
                         <a href="" className={styles.activitiesItemReadMore}>
                             Read More
