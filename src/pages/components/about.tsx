@@ -21,7 +21,7 @@ const AboutElement = () => (
                 </div>
                 <div className={styles.aboutContent}>
                     <p>
-                        From classrooms to coding, I'm Justin Maximillian
+                        From classrooms to coding, I&apos;m Justin Maximillian
                         Kimlim, a 12th grader with a relentless drive to learn
                         and contribute. Beyond the school walls, I lead Aspiring
                         Change Makers, a 100-member non-profit organization I
@@ -31,9 +31,9 @@ const AboutElement = () => (
                         communities.
                     </p>
                     <p>
-                        Leadership isn't limited to titles. Within Sutomo 1
-                        Senior High School's Student Council, I steered as a
-                        Steering Committee (previously president), driving
+                        Leadership isn&apos;t limited to titles. Within Sutomo 1
+                        Senior High School&apos;s Student Council, I steered as
+                        a Steering Committee (previously president), driving
                         student engagement and fostering a vibrant school
                         environment. My passion for organization spills over to
                         PPSN, a national-level science practical organization,
@@ -41,8 +41,8 @@ const AboutElement = () => (
                         our team stays motivated and thrives.
                     </p>
                     <p>
-                        Beyond leadership, I'm a tech whiz and a stargazer. When
-                        the bell rings, I unleash my inner techie, building
+                        Beyond leadership, I&apos;m a tech whiz and a stargazer.
+                        When the bell rings, I unleash my inner techie, building
                         innovative projects like Xplorer, a game-changer file
                         explorer built on TypeScript and Rust. When the code
                         stopped compiling, I lost myself in the beauty of the
@@ -53,7 +53,8 @@ const AboutElement = () => (
                     </p>
                     <p>
                         Want to join me on this adventure? Scroll down to see my
-                        projects, follow me on my journey, and let's connect!
+                        projects, follow me on my journey, and let&apos;s
+                        connect!
                     </p>
                 </div>
             </div>
