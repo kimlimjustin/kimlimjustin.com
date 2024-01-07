@@ -44,9 +44,14 @@ const Activities = () => {
                         <p className={styles.activitiesItemBriefDescription}>
                             {encode(activity.brief_description)}
                         </p>
-                        <a href="" className={styles.activitiesItemReadMore}>
-                            Read More
-                        </a>
+                        {activity.link && (
+                            <a
+                                href={activity.link}
+                                className={styles.activitiesItemReadMore}
+                            >
+                                {activity.link_text}
+                            </a>
+                        )}
                     </div>
                 ))}
             </div>
