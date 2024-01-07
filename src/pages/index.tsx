@@ -4,6 +4,7 @@ import HomeElement from "./components/home";
 import Navbar from "./components/navbar";
 import AboutElement from "./components/about";
 import Activities from "./components/activities";
+import Contact from "./components/contact";
 export default function Home() {
     return (
         <>
@@ -24,6 +25,7 @@ export default function Home() {
                 <HomeElement />
                 <AboutElement />
                 <Activities />
+                <Contact />
             </main>
         </>
     );

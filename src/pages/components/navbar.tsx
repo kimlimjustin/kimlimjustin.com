@@ -1,4 +1,5 @@
 import styles from "@/styles/Home.module.css";
+import { CV, EMAIL } from "@/utils/constant";
 import { Poppins, Alfa_Slab_One } from "next/font/google";
 import { useState } from "react";
 
@@ -29,16 +30,32 @@ const Navbar = () => {
             </span>
             <div className={styles.navbarItems}>
                 <a className={styles.navbarItem}>Home</a>
-                <a className={styles.navbarItem}>Portfolio</a>
-                <a className={styles.navbarItem}>Contact</a>
+                <a className={styles.navbarItem} href={CV}>
+                    CV
+                </a>
+                <a className={styles.navbarItem} href={`mailto:${EMAIL}`}>
+                    Contact
+                </a>
             </div>
             <div
                 className={styles.navbarItemsMobile}
                 style={{ width: hamburgerOnClicked ? "100%" : "0" }}
             >
-                <a className={styles.navbarItem}>Home</a>
-                <a className={styles.navbarItem}>Portfolio</a>
-                <a className={styles.navbarItem}>Contact</a>
+                <a
+                    className={styles.navbarItem}
+                    onClick={() => {
+                        window.scrollTo(0, 0);
+                        setHamburgerOnClicked(false);
+                    }}
+                >
+                    Home
+                </a>
+                <a className={styles.navbarItem} href={CV}>
+                    CV
+                </a>
+                <a className={styles.navbarItem} href={`mailto:${EMAIL}`}>
+                    Contact
+                </a>
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import { Typewriter } from "@/utils/typewriter";
 import { Poppins, Alfa_Slab_One } from "next/font/google";
 import SocialLinks from "./sociallinks";
 import Image from "next/image";
+import { CV } from "@/utils/constant";
 
 const POPPINS = Poppins({
     weight: "400",
@@ -42,9 +43,12 @@ const Home = () => (
                 layout="fill"
             />
         </div>
-        <div className={[styles.activities, POPPINS.className].join(" ")}>
-            View Portfolio
-        </div>
+        <a
+            className={[styles.activities, POPPINS.className].join(" ")}
+            href={CV}
+        >
+            View CV
+        </a>
         <a
             className={[styles.contactme, POPPINS.className].join(" ")}
             href="mailto:kimlimjustin@gmail.com"

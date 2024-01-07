@@ -14,26 +14,25 @@
     );
 }
 
-/* .container::before {
+.container::before {
     content: "";
     filter: blur(200px);
     height: 75%;
     left: 50%;
-    opacity: 0.6;
+    opacity: 0.15;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    z-index: -1;
     background: conic-gradient(
         from 147.14deg at 50% 50%,
-        #0f02fe -55.68deg,
-        #ca0014 113.23deg,
-        #6e1fd5 195deg,
-        #0f02fe 304.32deg,
-        #ca0014 473.23deg
+        #f4f6f8 -55.68deg,
+        rgb(251, 245, 236) 113.23deg,
+        #e6eaf2 195deg,
+        rgb(223, 215, 204) 304.32deg,
+        #ffffff 473.23deg
     );
-} */
+}
 
 .glow {
     position: absolute;
@@ -390,6 +389,66 @@
     margin-top: 0.3em;
 }
 
+.contactContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    position: relative;
+}
+
+.contactTitle {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    transform: scale(1.1, 1);
+    font-weight: 900;
+}
+
+.contactSubtitle {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: absolute;
+    top: -0.3em;
+    left: 50%;
+    -webkit-text-stroke: 1px hsla(0, 0%, 0%, 0.4);
+    transform: scale(1, 1.1) translateX(-50%);
+    color: transparent;
+}
+
+.contactEmail {
+    margin: 2.5em 0;
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: normal;
+    transform: scale(1, 1.3);
+    text-transform: uppercase;
+    display: flex;
+}
+
+.contactEmail::before,
+.contactEmail::after {
+    content: "";
+    background-color: #000;
+    width: 100vw;
+    height: 1px;
+    display: block;
+    margin-top: 2.8rem;
+}
+
+.contactSocials {
+    display: flex;
+    margin: 1em auto 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLink svg {
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0.5em;
+}
 @media screen and (max-width: 1024px) {
     .name1,
     .name2 {
@@ -441,6 +500,17 @@
         position: relative;
         border-left: 1px solid hsla(0, 0%, 0%, 0.1);
     }
+    .contactEmail {
+        font-size: 2.3em;
+    }
+    .contactEmail::before,
+    .contactEmail::after {
+        margin-top: 1.5rem;
+    }
+    .contactSubtitle {
+        font-size: 3.5em;
+        top: -0.25em;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -486,6 +556,20 @@
     .activitiesSubtitle {
         font-size: 3em;
         top: -0.33em;
+    }
+    .contactEmail {
+        font-size: 1.4em;
+    }
+    .contactEmail::before,
+    .contactEmail::after {
+        margin-top: 0.85rem;
+    }
+    .contactTitle {
+        font-size: 1.4em;
+    }
+    .contactSubtitle {
+        font-size: 2em;
+        top: -0.23em;
     }
 }
 
@@ -555,5 +639,20 @@
     }
     .activitiesItem {
         border-left: none !important;
+    }
+    .contactEmail {
+        font-size: 1.1em;
+    }
+    .contactEmail::before,
+    .contactEmail::after {
+        margin-top: 0.7rem;
+    }
+    .contactTitle {
+        font-size: 1.2em;
+    }
+    .contactSubtitle {
+        font-size: 1.8em;
+        width: 100vw;
+        top: -0.25em;
     }
 }
